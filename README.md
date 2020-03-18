@@ -1,27 +1,59 @@
-# NgFeather
+### Description
+ANGULAR 9 READY!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+This package allows you to use the [Feather Icons](https://github.com/colebemis/feather) in your angular applications. The icons are designed by Cole Bemis. 
+Angular version insprited by [Michael Bazos](https://github.com/michaelbazos/angular-feather).
 
-## Development server
+### Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Usage
 
-## Code scaffolding
+```ts  
+import { NgModule } from '@angular/core';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+import { NgFeatherModule } from 'ng-feather';
+import { Camera, Heart, Github } from 'ng-feather/icons';
 
-## Build
+const icons = {
+  X,
+  Home
+};
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+  imports: [
+    NgFeatherModule.pick(icons)
+  ],
+  exports: [
+    NgFeatherModule
+  ]
+})
+export class IconsModule { }
 
-## Running unit tests
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<fea-icon name="home" class="w1 h1"></fea-icon>
+<fea-icon name="x"></fea-icon>
+```
+### FAQ
 
-## Running end-to-end tests
+!!!! WARNING !!!!
+import all icon causing big bundle
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```ts
+import { allIcons } from 'ng-feather/icons';
 
-## Further help
+@NgModule({
+  imports: [
+    NgFeatherModule.pick(allIcons)
+  ],
+  exports: [
+    NgFeatherModule
+  ]
+})
+export class IconsModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+
+MIT © [Xanh Tool](mailto:xanhtool@gmail.com)
