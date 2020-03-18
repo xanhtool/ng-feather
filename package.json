@@ -1,6 +1,6 @@
 {
   "name": "ng-feather",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Angular Feather Icons",
   "keywords": [
     "angular",
@@ -11,16 +11,16 @@
     "components",
     "library"
   ],
-    "author": "Xanh Tool",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/xanhtool/ng-feather/issues"
-    },
-    "homepage": "https://github.com/xanhtool/ng-feather#readme",
-    "engines": {
-      "node": ">= 6.9.0",
-      "npm": ">= 3.0.0"
-    },
+  "author": "Xanh Tool",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xanhtool/ng-feather/issues"
+  },
+  "homepage": "https://github.com/xanhtool/ng-feather#readme",
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
