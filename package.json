@@ -29,7 +29,7 @@
     "build": "ng-packagr -p ng-package.json",
     "publish": "npm publish dist",
     "test": "echo \"No test specified\"",
-    "postversion": "npm run build && git push && git push --tags && npm publish"
+    "postversion": "npm run build && git push && git push --tags"
   },
   "devDependencies": {
     "@angular-devkit/schematics": "^9.0.6",
