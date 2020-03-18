@@ -1,0 +1,50 @@
+{
+  "name": "ng-feather",
+  "version": "1.0.0",
+  "description": "Angular Feather Icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanhtool/ng-feather.git"
+  },
+  "keywords": [
+    "angular",
+    "feather",
+    "icons",
+    "svg",
+    "ui",
+    "components",
+    "library"
+  ],
+  "author": "Xanh Tool",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xanhtool/ng-feather/issues"
+  },
+  "homepage": "https://github.com/xanhtool/ng-feather#readme",
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "publish": "npm publish dist"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics": "^9.0.6",
+    "@angular/compiler": "^9.0.1",
+    "@angular/compiler-cli": "^9.0.1",
+    "@angular/core": "^9.0.1",
+    "del": "^5.1.0",
+    "fs-extra": "^8.1.0",
+    "ng-packagr": "^9.0.1",
+    "rxjs": "^6.5.4",
+    "tsickle": "^0.38.0",
+    "tslib": "^1.10.0",
+    "typescript": "~3.7.5",
+    "uppercamelcase": "^3.0.0",
+    "zone.js": "~0.10.2"
+  },
+  "dependencies": {
+    "feather-icons": "4.26.0"
+  }
+}
