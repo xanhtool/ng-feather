@@ -1,7 +1,7 @@
 // tslint:disable-next-line: max-line-length
 import { Component, OnInit, Input, Renderer2, ElementRef, ChangeDetectorRef, Inject, SimpleChanges, OnChanges, AfterViewInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 import { uppercamelcase } from './utils';
-import { Icons } from '../public-api';
+import { Icons } from './icons.class';
 
 @Component({
   // tslint:disable-next-line: component-selector

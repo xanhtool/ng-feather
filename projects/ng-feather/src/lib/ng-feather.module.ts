@@ -1,10 +1,8 @@
 import { NgModule, ModuleWithProviders, Optional } from '@angular/core';
 import { NgFeatherComponent } from './ng-feather.component';
+import { Icons } from './icons.class';
 
-export class Icons {
-  // tslint:disable-next-line: ban-types
-  constructor(private icons: Object) { }
-}
+
 
 @NgModule({
   declarations: [NgFeatherComponent],

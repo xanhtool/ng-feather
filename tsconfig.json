@@ -22,6 +22,10 @@
       "ng-feather": [
         "dist/ng-feather/ng-feather",
         "dist/ng-feather"
+      ],
+      "ng-feather/icons": [
+        "dist/ng-feather/icons/icons",
+        "dist/ng-feather/icons"
       ]
     }
   },

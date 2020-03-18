@@ -10,9 +10,9 @@ function uppercamelcase(str) {
 
 const iconsSrcFolder = 'node_modules/feather-icons/dist/icons';
 
-const iconsDestFolder = 'projects/ng-feather/src/icons/svg';
-const indexFile = 'projects/ng-feather/src/icons/index.ts';
-const allFile = 'projects/ng-feather/src/icons/all.ts';
+const iconsDestFolder = 'projects/ng-feather/src/icons/src/svg';
+const indexFile = 'projects/ng-feather/src/icons/src/public_api.ts';
+const allFile = 'projects/ng-feather/src/icons/src/all.ts';
 
 let exportAllString = `\nexport const allIcons = {\n`;
 
