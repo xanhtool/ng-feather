@@ -28,6 +28,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "publish": "npm publish dist/ng-feather",
     "postversion": "ng build ng-feather --prod && git push && git push --tags && npm run publish",
     "gen-icon": "node generate-icons/generator"
   },
