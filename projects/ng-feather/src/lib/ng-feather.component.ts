@@ -1,5 +1,5 @@
 // tslint:disable-next-line: max-line-length
-import { Component, OnInit, Input, Renderer2, ElementRef, ChangeDetectorRef, Inject, SimpleChanges, OnChanges, AfterViewInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, Renderer2, ElementRef, ChangeDetectorRef, Inject, SimpleChanges, OnChanges, AfterViewInit, HostBinding, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { uppercamelcase } from './utils';
 import { Icons } from './icons.class';
 
@@ -21,7 +21,8 @@ import { Icons } from './icons.class';
         stroke-linejoin: round;
       }
   `],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class NgFeatherComponent implements OnInit, OnChanges, AfterViewInit {
   hostCustomClass = ['fea-ico'];
@@ -59,10 +60,11 @@ export class NgFeatherComponent implements OnInit, OnChanges, AfterViewInit {
   // }
 
   ngOnChanges(changes: SimpleChanges) {
-    const icons: any = { ... this.icons };
-    const svg = icons[uppercamelcase(changes.name.currentValue)] ?? '';
+    const icons: any = { ... this.icons[0] };
+    const name = uppercamelcase(changes.name.currentValue);
+    const svg = icons[name] ?? '';
     if (!svg) {
-      console.warn(`${changes.name.currentValue} icon is missing!`);
+      console.warn(`(${name}) ${changes.name.currentValue} icon is missing!`, icons);
     }
     this.elementRef.nativeElement.innerHTML = svg;
     this.changeDetector.markForCheck();

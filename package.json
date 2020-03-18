@@ -1,6 +1,26 @@
 {
   "name": "ng-feather",
-  "version": "0.0.0",
+  "version": "1.0.10",
+  "description": "Angular Feather Icons",
+  "keywords": [
+    "angular",
+    "feather",
+    "icons",
+    "svg",
+    "ui",
+    "components",
+    "library"
+  ],
+    "author": "Xanh Tool",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/xanhtool/ng-feather/issues"
+    },
+    "homepage": "https://github.com/xanhtool/ng-feather#readme",
+    "engines": {
+      "node": ">= 6.9.0",
+      "npm": ">= 3.0.0"
+    },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +28,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "postversion": "npm run build && git push && git push --tags && npm run publish",
     "gen-icon": "node generate-icons/generator"
   },
   "private": true,
@@ -22,6 +43,7 @@
     "@angular/router": "~9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "feather-icons": "^4.26.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -35,7 +57,6 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "del": "^5.1.0",
-    "feather-icons": "^4.26.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
