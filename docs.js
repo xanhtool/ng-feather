@@ -27,7 +27,7 @@ return Promise.resolve()
 
         fs.appendFileSync(
           iconListFile,
-          `| ![${name}](${svgUrl}) | \`${uppercamelcase(name)}\` | \`<i-feather name="${name}"></i-feather>\` |\n`
+          `| ![${name}](${svgUrl}) | \`${uppercamelcase(name)}\` | \`<fea-icon name="${name}"></fea-icon>\` |\n`
         );
       });
 

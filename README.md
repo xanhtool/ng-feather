@@ -35,8 +35,8 @@ export class IconsModule { }
 ```
 
 ```html
-<i-feather name="home" class="w1 h1"></i-feather>
-<i-feather name="x"></i-feather>
+<fea-icon name="home" class="w1 h1"></fea-icon>
+<fea-icon name="x"></fea-icon>
 ```
 ### FAQ
 

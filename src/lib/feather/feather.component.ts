@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, Inject, ChangeDetectorRef, OnChanges, Sim
 import { Icons } from './icons.provider';
 import { uppercamelcase } from './utils';
 @Component({
-  selector: 'i-feather, feather-icon',
+  selector: 'fea-icon',
   templateUrl: './feather.component.html',
   styleUrls: ['./feather.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

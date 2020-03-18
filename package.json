@@ -27,7 +27,8 @@
   },
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
-    "publish": "npm publish dist"
+    "publish": "npm publish dist",
+    "bump": "np"
   },
   "devDependencies": {
     "@angular-devkit/schematics": "^9.0.6",
