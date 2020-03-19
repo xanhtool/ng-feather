@@ -1,8 +1,29 @@
 {
-  "name": "ng-feather",
+    "name": "ng-feather",
+    "description": "Angular Feather Icons",
+    "keywords": [
+      "angular",
+      "feather",
+      "icons",
+      "svg",
+      "ui",
+      "components",
+      "library"
+    ],
+    "author": "Xanh Tool",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/xanhtool/ng-feather/issues"
+    },
+    "homepage": "https://github.com/xanhtool/ng-feather#readme",
+    "engines": {
+      "node": ">= 6.9.0",
+      "npm": ">= 3.0.0"
+    },
   "version": "0.0.1",
   "scripts": {
-    "postversion": "ng build ng-feather --prod && git push && git push --tags && npm run publish"
+    "publish": "npm publish dist/ng-feather",
+    "postversion": "ng build ng-feather --prod && npm run publish && git push && git push --tags"
   },
   "peerDependencies": {
     "@angular/common": "^9.0.6",
