@@ -9,32 +9,33 @@ import { Icons } from './icons.class';
   template: `
     <ng-content></ng-content>
   `,
-  styles: [`
-      .fea-ico {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 2px;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-  `],
+  // styleUrls: ['./ng-feather.component.scss'],
+  // styles: [`
+  //     .fea-ico {
+  //       display: inline-block;
+  //       width: 24px;
+  //       height: 24px;
+  //       fill: none;
+  //       stroke: currentColor;
+  //       stroke-width: 2px;
+  //       stroke-linecap: round;
+  //       stroke-linejoin: round;
+  //     }
+  // `],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
 export class NgFeatherComponent implements OnInit, OnChanges, AfterViewInit {
-  hostCustomClass = ['fea-ico'];
+  // @HostBinding('class.myFirstHostedClass')
+  // @HostBinding('class.mySecondHostedClass') classes = true;
+  hostCustomClass = 'fea-ico';
   @Input() name = '';
   @Input() class = '';
-  @HostBinding('class')
-  get hostClasses(): string {
-    return [
-      this.hostCustomClass,
-      this.class, // include our new one
-    ].join(' ');
-  }
+  // @HostBinding('class')
+  // get hostClasses(): string {
+  //   return [...this.class.split(' ')].join(' ');
+  // }
+
   constructor(
     private renderer: Renderer2,
     private elementRef: ElementRef,
@@ -68,6 +69,11 @@ export class NgFeatherComponent implements OnInit, OnChanges, AfterViewInit {
     }
     this.elementRef.nativeElement.innerHTML = svg;
     this.changeDetector.markForCheck();
+    this.addClass();
+  }
+
+  addClass() {
+    this.renderer.setAttribute(this.elementRef.nativeElement, 'class', this.hostCustomClass + ' ' + this.class);
   }
 
 }
